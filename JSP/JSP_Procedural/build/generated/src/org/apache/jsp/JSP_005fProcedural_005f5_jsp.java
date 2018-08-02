@@ -1,0 +1,142 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public final class JSP_005fProcedural_005f5_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+
+            int a = 1;
+
+            double add(double v1, double v2) {
+                return v1 + v2;
+            }
+
+            double sub(double v1, double v2) {
+                return v1 - v2;
+            }
+        
+
+            int b = 2;
+
+            double div(double v1, double v2) {
+                return v1 / v2;
+            }
+
+            double mul(double v1, double v2) {
+                return v1 * v2;
+            }
+        
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("    <head>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <title>JSP_Procedural_5</title>\n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
+      out.write("        ");
+      out.write("\n");
+      out.write("        ");
+
+            double x = 5;
+            double y = 5;
+        
+      out.write("\n");
+      out.write("        ");
+      out.print( "<h1>" + add(x + a, y + b) + "</h1>");
+      out.write("\n");
+      out.write("        ");
+
+            a++;
+            b++;
+        
+      out.write("\n");
+      out.write("        ");
+      out.print( "<h1>" + sub(x + a, y + b) + "</h1>");
+      out.write("\n");
+      out.write("        ");
+
+            a++;
+            b++;
+        
+      out.write("\n");
+      out.write("\n");
+      out.write("        ");
+
+            double m = Math.random()*100 %100;
+            double n = Math.random()*100 %100;
+            if( m+n > 50 ){ 
+      out.write("\n");
+      out.write("            <h1> Value Greater than 50 </h1>\n");
+      out.write("            ");
+}
+        
+      out.write("    \n");
+      out.write("        ");
+      out.print( "<h1>" + mul(x + m + a, y + n + b) + "</h1>");
+      out.write("\n");
+      out.write("        ");
+
+            a++;
+            b++;
+        
+      out.write("\n");
+      out.write("        ");
+      out.print( "<h1>" + div(x + m + a, y + n + b) + "</h1>");
+      out.write("\n");
+      out.write("        ");
+      out.write("\n");
+      out.write("    </body>\n");
+      out.write("</html>\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
